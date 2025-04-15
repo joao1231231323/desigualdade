@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #121212;
+    color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff4b2b;
+    animation: fadeIn 2s ease-in;
+  }
+  
+  .intro {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #cccccc;
+    font-style: italic;
+    animation: fadeIn 2s ease-in 1s;
+  }
+  
+  .content {
+    line-height: 1.8;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #ff4b2b;
+    margin-top: 30px;
+    animation: fadeIn 2s ease-in 2s;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in 3s;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #aaaaaa;
+  }
+  
+  footer a {
+    color: #ff4b2b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: #ffffff;
+  }
+  
+  /* Animação para os brilhos */
+  @keyframes glow {
+    0% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+  }
+  
+  /* Gradiente com brilhos sutis */
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 75, 43, 0.2) 0%, rgba(0, 0, 0, 0.9) 80%);
+    animation: glow 3s infinite ease-in-out;
+    z-index: -1;
+  }
+  
+  /* Brilho leve sobre o fundo */
+  body::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 75, 43, 0.5);
+    border-radius: 50%;
+    animation: glow 4s infinite ease-in-out;
+    z-index: -2;
+    transform: translateX(-50%);
+  }
+  
+  /* Mais brilho ao fundo */
+  body::before, body::after {
+    filter: blur(50px);
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  h2 {
+    font-size: 2rem;
+    color: #ff4b2b;
+    margin-top: 30px;
+    animation: fadeIn 2s ease-in 2s;
+    display: flex;
+    align-items: center;
+  }
+  
+  h2::before {
+    content: url('https://img.icons8.com/ios-filled/50/ff4b2b/expand-arrow.png');
+    margin-right: 10px;
+    animation: bounce 1s infinite ease-in-out;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Animação de Fade In */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .cta-btn {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    background-color: #ff4b2b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+  }
+  
+  .cta-btn:hover {
+    background-color: #ff6f61;
+  }
+  
+  .cta-btn:active {
+    transform: scale(0.98);
+  }
+  
+  

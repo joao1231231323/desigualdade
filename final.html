@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desigualdade Social: O Que Podemos Fazer?</title>
+  <link rel="stylesheet" href="ultimo.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="final-container">
+    <header class="final-header">
+      <h1 class="final-title">Juntos Podemos Mudar o Futuro</h1>
+      <p class="final-message">
+        A desigualdade social é um problema complexo e profundo, mas a mudança começa com a nossa ação. Cada pequeno passo conta. 
+        Juntos podemos construir um mundo mais justo e igualitário para todos. A conscientização é o primeiro passo para um futuro melhor.
+      </p>
+    </header>
+
+    <!-- Seção do gráfico -->
+    <section class="chart-section">
+      <h2 class="section-title">Comparação de Desigualdade Social entre Países</h2>
+      <canvas id="socialInequalityChart"></canvas>
+    </section>
+
+    <!-- Seção do vídeo -->
+    <section class="video-section">
+      <h2 class="section-title">Veja Mais no YouTube</h2>
+      <p>Assista ao vídeo abaixo para entender mais sobre a desigualdade social:</p>
+      <a href="https://www.youtube.com/watch?v=h0ryyNb0vmI" target="_blank">
+        <button class="cta-btn">Assistir Vídeo sobre Desigualdade Social</button>
+      </a>
+    </section>
+
+    <section class="call-to-action">
+      <p class="cta-text">Seja a mudança que você quer ver no mundo. Comece hoje, com pequenas atitudes.</p>
+      <a href="pag_prin.html"><button class="cta-btn">Voltar à Página Inicial</button></a>
+    </section>
+
+    <footer class="final-footer">
+      <p class="footer-text">© 2025. Todos os direitos reservados.</p>
+    </footer>
+  </div>
+
+  <script src="ultimo.js"></script>
+
+  <script>
+    var ctx = document.getElementById('socialInequalityChart').getContext('2d');
+    var socialInequalityChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Brasil', 'Estados Unidos', 'Índia'],
+        datasets: [
+          {
+            label: 'Acesso à Educação',
+            data: [40, 85, 60], // Valores fictícios de porcentagem de acesso à educação
+            backgroundColor: 'rgba(255, 75, 43, 0.6)',
+            borderColor: 'rgba(255, 75, 43, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Acesso à Saúde',
+            data: [50, 90, 65], // Valores fictícios de acesso à saúde
+            backgroundColor: 'rgba(43, 43, 255, 0.6)',
+            borderColor: 'rgba(43, 43, 255, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Renda Média',
+            data: [30, 80, 45], // Valores fictícios de renda média
+            backgroundColor: 'rgba(43, 255, 43, 0.6)',
+            borderColor: 'rgba(43, 255, 43, 1)',
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
